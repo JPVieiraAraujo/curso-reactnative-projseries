@@ -3,13 +3,14 @@ import { View, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import LoginScreen from './src/pages/LoginScreen';
+import LoginScreen from './src/screens/LoginScreen';
 
 const Stack = createStackNavigator();
 
 function App() {
   return (
     <NavigationContainer>
+      
       <Stack.Navigator 
         screenOptions={{
           title: "Series",
@@ -28,6 +29,7 @@ function App() {
       >
         <Stack.Screen name="Login" component={LoginScreen} />
       </Stack.Navigator>
+
     </NavigationContainer>
   );
 }
